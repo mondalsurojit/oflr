@@ -5,6 +5,12 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
     <style>
         * {
+            margin: 0;
+            padding: 0;
+            border: none;
+            outline: none;
+            list-style: none;
+            text-decoration: none;
             box-sizing: border-box;
         }
 
@@ -38,24 +44,45 @@
             font-size: 32px;
             font-weight: 800;
             text-align: center;
-            margin: 20px 0;
+            margin-top:150px;
         }
 
-        .offer-letter .header,
+
         .offer-letter .footer {
             text-align: center;
             font-size: 12px;
         }
 
-        #above-letter{
-            border-bottom: 2px solid red;
+        .offer-letter .header {
+            font-size: 12px;
+            margin-left: 130px;
+            margin-top: -90px;
+        }
+
+        .logo {
+            height: 105px;
+        }
+
+        .social-links {
+            margin-top: -22px;
+            margin-left: 25px;
+        }
+
+        .social-icons {
+            height: 15px;
+        }
+
+        #above-letter {
+            border-bottom: 2px solid #1A86AC;
             display: flex;
             justify-content: space-between;
         }
+
         .offer-letter .content {
             font-size: 12px;
             text-align: justify;
             margin: 20px 0;
+            line-height: 25px;
         }
 
         .offer-letter .date,
@@ -95,6 +122,79 @@
             background-color: #45a049;
         }
 
+        #rec1 {
+            margin-top: -137px;
+            display: flex;
+            margin-left: 480px;
+        }
+
+        #rec2 {
+            margin-top: -80px;
+            display: flex;
+            margin-left: 520px;
+        }
+
+        #rec3 {
+            margin-top: -27px;
+            display: flex;
+            margin-left: 571px;
+            transform: rotate(-2deg);
+            z-index: 11111;
+            position: absolute;
+        }
+
+        #rec4 {
+            margin-top: -30px;
+            display: flex;
+            margin-left: 571px;
+
+        }
+        #rec5 {
+    margin-top: -80px;
+    display: flex;
+    margin-left: 651px;
+}
+#rec6 {
+    margin-top: 10px;
+    display: flex;
+    margin-left: 681px;
+}
+#rec7{
+   position: relative;
+    margin-left: -39px;
+    margin-top: 107px;
+    transform: rotate(2deg);
+}
+#rec8{
+    margin-bottom: -43px;
+    margin-left: -39px;
+}
+#rec9{
+    margin-bottom: -43px;
+    margin-left: -5px;
+}
+#rec10{
+margin-left: -110px;
+margin-bottom: -43px;
+}
+#rec11{
+    margin-bottom: -10px;
+    margin-left: 25px;
+}
+#rec12{
+    margin-bottom: 50px;
+    margin-left: -70px;
+}
+#stamp{
+    margin-top: -110px;
+    margin-left: 620px;
+    display: flex;
+    transform: rotate(-30deg);
+}
+#msme{
+    margin-right: 280px;
+    margin-top: -30px;
+}
         @media print {
             body {
                 display: block;
@@ -117,11 +217,25 @@
 <body>
     <div class="offer-letter" id="offer-letter">
         <div class="background"></div>
+        <img src="logo.png" alt="" srcset="" class="logo">
         <div class="header">
-            <span>www.ciphersoftwares.tech</span>
-            <span>contact.ciphersoftwares@gmail.com</span>
-            <span>Cipher Softwares</span>
+
+            <img src="images/world-wide-web_1006771.png" alt="" srcset="" class="social-icons">
+            <span class="social-links">www.ciphersoftwares.tech</span>
+            <img src="images/empty-email_80599.png" alt="" srcset="" class="social-icons">
+            <span class="social-links">contact.ciphersoftwares@gmail.com</span>
+            <img src="images/linkedin_145807.png" alt="" srcset="" class="social-icons">
+            <span class="social-links">Cipher Softwares</span>
         </div>
+
+        <img src="images2/Rectangle 1898.svg" alt="" srcset="" id="rec1">
+        <img src="images2/Ellipse 2297.svg" alt="" srcset="" id="rec2">
+        <img src="images2/Rectangle 1900.svg" alt="" srcset="" id="rec3">
+        <img src="images2/Rectangle 1899.svg" alt="" srcset="" id="rec4">
+        <img src="images2/Ellipse 2296.svg" alt="" srcset="" id="rec5">
+        <img src="images2/Ellipse 2300.svg" alt="" srcset="" id="rec6">
+
+
         <span class="title">OFFER LETTER</span>
         <div id="above-letter">
             <div class="to">To: <span>FULLNAME</span></div>
@@ -129,23 +243,34 @@
         </div>
         <div class="content">
             <p>We are excited to announce your acceptance into Cipher Softwares as a "Web Developer Intern," starting on
-                July 13, 2024. Welcome to the team!</p>
+                July 13, 2024. Welcome to the team!</p><br>
             <p>At Cipher Softwares, we see internships as more than just positions; they are crucial learning
                 experiences where students can develop and hone their skills. Throughout your time with us, you will
                 have the chance to engage in hands-on learning, applying theoretical knowledge to real-world situations.
-            </p>
+            </p><br>
             <p>Prepare yourself to explore numerous opportunities to demonstrate and enhance your abilities while
                 gaining valuable insights into the industry's inner workings. By accepting this offer, you agree to
                 diligently execute assigned tasks and maintain excellence in all aspects of your work. We are confident
                 that your internship with us will be enriching and will provide you with the expertise to excel in your
-                future endeavors.</p>
+                future endeavors.</p><br>
             <p>We are thrilled to have you join our team and look forward to embarking on this rewarding journey
                 together.</p>
-        </div>
+        </div><br>
         <div class="best-regards">
             <span>Best Regards,</span>
             <span>Cipher Softwares</span>
+            <img src="images/pngwing.com (2) 1.png" alt="" srcset="" id="msme">
+            <img src="images/Red and White Minimalist Christmas Circle Sticker 1.png" alt="" srcset="" id="stamp">
+            
         </div>
+        <img src="images2/Rectangle 1904.svg" alt="" srcset="" id="rec7">
+        <img src="images2/Rectangle 1901.svg" alt="" srcset="" id="rec8">
+        <img src="images2/Rectangle 1902.svg" alt="" srcset="" id="rec9">
+        <img src="images2/Rectangle 1903.svg" alt="" srcset="" id="rec10">
+        <!-- <img src="images2/Rectangle 1903.svg" alt="" srcset="" id="rec11"> -->
+        <img src="images2/Ellipse 2299.svg" alt="" srcset="" id="rec11">
+        <img src="images2/Ellipse 2300.svg" alt="" srcset="" id="rec12">
+
     </div>
     <button class="pdf-button" onclick="window.print()">Download PDF</button>
 </body>
