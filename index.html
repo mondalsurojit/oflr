@@ -6,16 +6,21 @@
     <style>
         * {
             box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            border: none;
+            outline: none;
+            list-style: none;
+            text-decoration: none;
         }
 
         body {
             font-size: 14px;
             font-family: 'Poppins', sans-serif;
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            flex-direction: row;
+            align-items: flex-start;
             height: 100vh;
-            margin: 0;
             background: rgba(249, 249, 249, 1);
         }
 
@@ -47,11 +52,12 @@
             font-size: 12px;
         }
 
-        #above-letter{
+        #above-letter {
             border-bottom: 2px solid red;
             display: flex;
             justify-content: space-between;
         }
+
         .offer-letter .content {
             font-size: 12px;
             text-align: justify;
@@ -95,6 +101,56 @@
             background-color: #45a049;
         }
 
+        .control-box {
+            width: 260px;
+            padding: 20px;
+            background: #f9f9f9;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-right: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            position: sticky;
+            top: 20px;
+        }
+
+        .control-box label {
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .control-box input,
+        .control-box select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        .control-box input[type="date"] {
+            padding: 8px;
+        }
+
+        .pdf-button {
+            margin-top: 16px;
+            padding: 12px 24px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .pdf-button:hover {
+            background-color: #45a049;
+        }
+
         @media print {
             body {
                 display: block;
@@ -104,17 +160,41 @@
             .pdf-button {
                 display: none;
             }
+
+            .control-box {
+                display: none;
+            }
         }
 
         @page {
-            size: auto;
-            margin: 0mm;
+            size: A4;
+            margin: 0;
         }
     </style>
     <title>Offer Letter</title>
 </head>
 
 <body>
+    <div class="control-box">
+        <label for="name">Intern Name:</label>
+        <input type="text" id="name" value="FULLNAME" />
+        <label for="date">Date:</label>
+        <input type="date" id="date" value="2024-07-13" />
+        <label for="designation">Designation:</label>
+        <select id="designation">
+            <option>Web Development</option>
+            <option>UI/ UX Designing</option>
+            <option>Android Development</option>
+            <option>Artificial Intelligence</option>
+            <option>Machine Learning</option>
+            <option>Java Programming</option>
+            <option>C++ Programming</option>
+            <option>Python Programming</option>
+            <option>AutoCAD</option>
+        </select>
+        <button class="pdf-button">Download PDF</button>
+    </div>
+
     <div class="offer-letter" id="offer-letter">
         <div class="background"></div>
         <div class="header">
@@ -124,12 +204,13 @@
         </div>
         <span class="title">OFFER LETTER</span>
         <div id="above-letter">
-            <div class="to">To: <span>FULLNAME</span></div>
-            <div class="date">Date: <span>13.07.2024</span></div>
+            <div class="to">To: <span id="intern-name">FULLNAME</span></div>
+            <div class="date">Date: <span id="intern-date">13.07.2024</span></div>
         </div>
         <div class="content">
-            <p>We are excited to announce your acceptance into Cipher Softwares as a "Web Developer Intern," starting on
-                July 13, 2024. Welcome to the team!</p>
+            <p style="white-space: nowrap;">We are excited to announce your acceptance into Cipher Softwares as a "<span
+                    id="intern-designation">Web Developer Intern</span>," starting on <span id="start-date">July
+                    13, 2024</span>. Welcome to the team!</p>
             <p>At Cipher Softwares, we see internships as more than just positions; they are crucial learning
                 experiences where students can develop and hone their skills. Throughout your time with us, you will
                 have the chance to engage in hands-on learning, applying theoretical knowledge to real-world situations.
@@ -147,7 +228,21 @@
             <span>Cipher Softwares</span>
         </div>
     </div>
-    <button class="pdf-button" onclick="window.print()">Download PDF</button>
+
+    <script>
+        function updateLetter() {
+            document.getElementById('intern-name').textContent = document.getElementById('name').value;
+            const date = new Date(document.getElementById('date').value);
+            document.getElementById('intern-date').textContent = date.toLocaleDateString();
+            document.getElementById('start-date').textContent = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+            document.getElementById('intern-designation').textContent = document.getElementById('designation').value;
+        }
+
+        document.getElementById('name').addEventListener('input', updateLetter);
+        document.getElementById('date').addEventListener('input', updateLetter);
+        document.getElementById('designation').addEventListener('change', updateLetter);
+        document.querySelector('.pdf-button').addEventListener('click', () => window.print()); 
+    </script>
 </body>
 
 </html>
