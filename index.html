@@ -3,288 +3,20 @@
 
 <head>
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            border: none;
-            outline: none;
-            list-style: none;
-            text-decoration: none;
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            border: none;
-            outline: none;
-            list-style: none;
-            text-decoration: none;
-        }
-
-        body {
-            font-size: 14px;
-            font-family: 'Poppins', sans-serif;
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            height: 100vh;
-            background: rgba(249, 249, 249, 1);
-        }
-
-        .offer-letter {
-            width: 21cm;
-            height: 29.7cm;
-            padding: 1cm;
-            background: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            position: relative;
-            page-break-after: always;
-        }
-
-        .offer-letter span {
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        .offer-letter .title {
-            font-size: 32px;
-            font-weight: 800;
-            text-align: center;
-            margin-top:150px;
-        }
-
-
-        .offer-letter .footer {
-            text-align: center;
-            font-size: 12px;
-        }
-
-        /* #above-letter {
-            border-bottom: 2px solid red; */
-        .offer-letter .header {
-            font-size: 12px;
-            margin-left: 130px;
-            margin-top: -90px;
-        }
-
-        .logo {
-            height: 105px;
-        }
-
-        .social-links {
-            margin-top: -22px;
-            margin-left: 25px;
-        }
-
-        .social-icons {
-            height: 15px;
-        }
-
-        #above-letter {
-            border-bottom: 2px solid #1A86AC;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .offer-letter .content {
-            font-size: 12px;
-            text-align: justify;
-            margin: 20px 0;
-            line-height: 25px;
-        }
-
-        .offer-letter .date,
-        .offer-letter .to {
-            font-size: 12px;
-            margin: 10px 0;
-        }
-
-        .offer-letter .best-regards {
-            text-align: right;
-            margin-top: 40px;
-            font-size: 12px;
-        }
-
-        .offer-letter .background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0.1;
-            background: url('background_noise.svg') center center / cover no-repeat;
-        }
-
-        .pdf-button {
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-
-        .pdf-button:hover {
-            background-color: #45a049;
-        }
-
-        .control-box {
-            width: 260px;
-            padding: 20px;
-            background: #f9f9f9;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin-right: 20px;
-            margin-top: 20px;
-            border-radius: 8px;
-            position: sticky;
-            top: 20px;
-        }
-
-        .control-box label {
-            font-size: 14px;
-            margin-bottom: 8px;
-            color: #333;
-        }
-
-        .control-box input,
-        .control-box select {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 12px;
-            box-sizing: border-box;
-            font-size: 14px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            outline: none;
-        }
-
-        .control-box input[type="date"] {
-            padding: 8px;
-        }
-
-        .pdf-button {
-            margin-top: 16px;
-            padding: 12px 24px;
-            font-size: 16px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .pdf-button:hover {
-            background-color: #45a049;
-        }
-
-        #rec1 {
-            margin-top: -137px;
-            display: flex;
-            margin-left: 480px;
-        }
-
-        #rec2 {
-            margin-top: -80px;
-            display: flex;
-            margin-left: 520px;
-        }
-
-        #rec3 {
-            margin-top: -27px;
-            display: flex;
-            margin-left: 571px;
-            transform: rotate(-2deg);
-            z-index: 11111;
-            position: absolute;
-        }
-
-        #rec4 {
-            margin-top: -30px;
-            display: flex;
-            margin-left: 571px;
-
-        }
-        #rec5 {
-    margin-top: -80px;
-    display: flex;
-    margin-left: 651px;
-}
-#rec6 {
-    margin-top: 10px;
-    display: flex;
-    margin-left: 681px;
-}
-#rec7{
-   position: relative;
-    margin-left: -39px;
-    margin-top: 107px;
-    transform: rotate(2deg);
-}
-#rec8{
-    margin-bottom: -43px;
-    margin-left: -39px;
-}
-#rec9{
-    margin-bottom: -43px;
-    margin-left: -5px;
-}
-#rec10{
-margin-left: -110px;
-margin-bottom: -43px;
-}
-#rec11{
-    margin-bottom: -10px;
-    margin-left: 25px;
-}
-#rec12{
-    margin-bottom: 50px;
-    margin-left: -70px;
-}
-#stamp{
-    margin-top: -110px;
-    margin-left: 620px;
-    display: flex;
-    transform: rotate(-30deg);
-}
-#msme{
-    margin-right: 280px;
-    margin-top: -30px;
-}
-        @media print {
-            body {
-                display: block;
-                background: white;
-            }
-
-            .pdf-button {
-                display: none;
-            }
-
-            .control-box {
-                display: none;
-            }
-        }
-
-        @page {
-            size: A4;
-            margin: 0;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
     <title>Offer Letter</title>
 </head>
 
 <body>
-    <div class="control-box">
+    <section class="control-box">
         <label for="name">Intern Name:</label>
         <input type="text" id="name" value="FULLNAME" />
         <label for="date">Date:</label>
-        <input type="date" id="date" value="2024-07-13" />
+        <input type="date" id="date" />
         <label for="designation">Designation:</label>
         <select id="designation">
             <option>Web Development</option>
-            <option>UI/ UX Designing</option>
+            <option>UI/UX Designing</option>
             <option>Android Development</option>
             <option>Artificial Intelligence</option>
             <option>Machine Learning</option>
@@ -293,20 +25,23 @@ margin-bottom: -43px;
             <option>Python Programming</option>
             <option>AutoCAD</option>
         </select>
-        <button class="pdf-button">Download PDF</button>
-    </div>
+        <div id="controls-button">
+            <button class="edit-button">Edit</button>
+            <button class="pdf-button">Download</button>
+        </div>
+    </section>
 
-    <div class="offer-letter" id="offer-letter">
-        <div class="background"></div>
-        <img src="logo.png" alt="" srcset="" class="logo">
+    <section class="offer-letter" id="offer-letter">
+        <img src="images/logo.png" alt="" srcset="" class="logo">
         <div class="header">
-
             <img src="images/world-wide-web_1006771.png" alt="" srcset="" class="social-icons">
-            <span class="social-links">www.ciphersoftwares.tech</span>
+            <a href="https://www.ciphersoftwares.tech"><span class="social-links">www.ciphersoftwares.tech</span></a>
             <img src="images/empty-email_80599.png" alt="" srcset="" class="social-icons">
-            <span class="social-links">contact.ciphersoftwares@gmail.com</span>
+            <a href="mailto:contact.ciphersoftwares@gmail.com"><span
+                    class="social-links">contact.ciphersoftwares@gmail.com</span></a>
             <img src="images/linkedin_145807.png" alt="" srcset="" class="social-icons">
-            <span class="social-links">Cipher Softwares</span>
+            <a href="https://www.linkedin.com/company/cipher-softwares"><span class="social-links">Cipher
+                    Softwares</span></a>
         </div>
 
         <img src="images2/Rectangle 1898.svg" alt="" srcset="" id="rec1">
@@ -316,16 +51,14 @@ margin-bottom: -43px;
         <img src="images2/Ellipse 2296.svg" alt="" srcset="" id="rec5">
         <img src="images2/Ellipse 2300.svg" alt="" srcset="" id="rec6">
 
-
         <span class="title">OFFER LETTER</span>
         <div id="above-letter">
-            <div class="to">To: <span id="intern-name">FULLNAME</span></div>
-            <div class="date">Date: <span id="intern-date">13.07.2024</span></div>
+            <div class="to">To: <span id="intern-name" contenteditable="false">FULLNAME</span></div>
+            <div class="date">Date: <span id="intern-date" contenteditable="false"></span></div>
         </div>
-        <div class="content">
-            <p style="white-space: nowrap;">We are excited to announce your acceptance into Cipher Softwares as a "<span
-                    id="intern-designation">Web Developer Intern</span>," starting on <span id="start-date">July
-                    13, 2024</span>. Welcome to the team!</p>
+        <div class="content" contenteditable="false">
+            <p>We are excited to announce your acceptance into Cipher Softwares as a "<u id="intern-designation">Web
+                    Developer</u> Intern", starting on <u id="start-date"></u>. Welcome to the team!</p>
             <p>At Cipher Softwares, we see internships as more than just positions; they are crucial learning
                 experiences where students can develop and hone their skills. Throughout your time with us, you will
                 have the chance to engage in hands-on learning, applying theoretical knowledge to real-world situations.
@@ -341,33 +74,49 @@ margin-bottom: -43px;
         <div class="best-regards">
             <span>Best Regards,</span>
             <span>Cipher Softwares</span>
-            <img src="images/pngwing.com (2) 1.png" alt="" srcset="" id="msme">
+            <img src="images/pngwing.com (2).png" alt="" srcset="" id="msme">
             <img src="images/Red and White Minimalist Christmas Circle Sticker 1.png" alt="" srcset="" id="stamp">
-            
         </div>
         <img src="images2/Rectangle 1904.svg" alt="" srcset="" id="rec7">
         <img src="images2/Rectangle 1901.svg" alt="" srcset="" id="rec8">
         <img src="images2/Rectangle 1902.svg" alt="" srcset="" id="rec9">
         <img src="images2/Rectangle 1903.svg" alt="" srcset="" id="rec10">
-        <!-- <img src="images2/Rectangle 1903.svg" alt="" srcset="" id="rec11"> -->
         <img src="images2/Ellipse 2299.svg" alt="" srcset="" id="rec11">
         <img src="images2/Ellipse 2300.svg" alt="" srcset="" id="rec12">
-
-    </div>
+    </section>
 
     <script>
         function updateLetter() {
-            document.getElementById('intern-name').textContent = document.getElementById('name').value;
+            const name = document.getElementById('name').value;
             const date = new Date(document.getElementById('date').value);
+            const designation = document.getElementById('designation').value;
+
+            document.getElementById('intern-name').textContent = name;
             document.getElementById('intern-date').textContent = date.toLocaleDateString();
             document.getElementById('start-date').textContent = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-            document.getElementById('intern-designation').textContent = document.getElementById('designation').value;
+            document.getElementById('intern-designation').textContent = designation;
+        }
+
+        function toggleEditMode() {
+            const editableElements = document.querySelectorAll('#offer-letter [contenteditable]');
+            const isEditable = editableElements[0].isContentEditable;
+            editableElements.forEach(element => element.contentEditable = !isEditable);
+            document.querySelector('.edit-button').textContent = isEditable ? 'Edit' : 'Save';
+        }
+
+        function setDefaultDate() {
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('date').value = today;
+            updateLetter();
         }
 
         document.getElementById('name').addEventListener('input', updateLetter);
         document.getElementById('date').addEventListener('input', updateLetter);
         document.getElementById('designation').addEventListener('change', updateLetter);
-        document.querySelector('.pdf-button').addEventListener('click', () => window.print()); 
+        document.querySelector('.pdf-button').addEventListener('click', () => window.print());
+        document.querySelector('.edit-button').addEventListener('click', toggleEditMode);
+
+        window.onload = setDefaultDate;
     </script>
 </body>
 

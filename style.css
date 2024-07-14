@@ -1,0 +1,258 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    background: rgba(249, 249, 249, 1);
+}
+
+.offer-letter {
+    width: 21cm;
+    height: 29.7cm;
+    padding: 1cm;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    page-break-after: always;
+    overflow: hidden;
+    /* background: url('background_noise.svg') center center / cover repeat; */
+}
+
+.offer-letter span {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.offer-letter .title {
+    font-size: 32px;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 150px;
+}
+
+.offer-letter .footer {
+    text-align: center;
+    font-size: 12px;
+}
+
+.offer-letter .header {
+    font-size: 12px;
+    margin-left: 130px;
+    margin-top: -90px;
+}
+
+.logo {
+    height: 105px;
+}
+
+.social-links {
+    margin-top: -22px;
+    margin-left: 25px;
+}
+
+.social-icons {
+    height: 15px;
+}
+
+#above-letter {
+    border-bottom: 2px solid #1A86AC;
+    display: flex;
+    justify-content: space-between;
+}
+
+.offer-letter .content {
+    font-size: 12px;
+    text-align: justify;
+    margin: 20px 0;
+    line-height: 25px;
+}
+
+.offer-letter .date,
+.offer-letter .to {
+    font-size: 12px;
+    margin: 10px 0;
+}
+
+.offer-letter .best-regards {
+    text-align: right;
+    margin-top: 40px;
+    font-size: 12px;
+}
+
+#controls-button {
+    display: block;
+    margin: auto;
+    padding-top: 16px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.pdf-button,
+.edit-button {
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.edit-button {
+    min-width: 93px;
+}
+
+.pdf-button:hover,
+.edit-button:hover {
+    background-color: #45a049;
+}
+
+.control-box {
+    width: 260px;
+    padding: 20px;
+    background: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    position: sticky;
+    top: 20px;
+    left: 0;
+}
+
+.control-box label {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.control-box input,
+.control-box select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+.control-box input[type="date"] {
+    padding: 8px;
+}
+
+#rec1 {
+    margin-top: -137px;
+    display: flex;
+    margin-left: 480px;
+}
+
+#rec2 {
+    margin-top: -80px;
+    display: flex;
+    margin-left: 520px;
+}
+
+#rec3 {
+    margin-top: -27px;
+    display: flex;
+    margin-left: 571px;
+    transform: rotate(-2deg);
+    z-index: 11111;
+    position: absolute;
+}
+
+#rec4 {
+    margin-top: -30px;
+    display: flex;
+    margin-left: 571px;
+}
+
+#rec5 {
+    margin-top: -80px;
+    display: flex;
+    margin-left: 651px;
+}
+
+#rec6 {
+    margin-top: 10px;
+    display: flex;
+    margin-left: 681px;
+}
+
+#rec7 {
+    position: relative;
+    margin-left: -39px;
+    margin-top: 135px;
+    bottom: 0px;
+    transform: rotate(2deg);
+}
+
+#rec8 {
+    margin-bottom: -43px;
+    margin-left: -39px;
+}
+
+#rec9 {
+    margin-bottom: -43px;
+    margin-left: -5px;
+}
+
+#rec10 {
+    margin-left: -110px;
+    margin-bottom: -43px;
+}
+
+#rec11 {
+    margin-bottom: -10px;
+    margin-left: 25px;
+}
+
+#rec12 {
+    margin-bottom: 50px;
+    margin-left: -70px;
+}
+
+#stamp {
+    margin-top: -125px;
+    margin-left: 620px;
+    display: flex;
+    transform: rotate(-30deg);
+}
+
+#msme {
+    margin-right: 280px;
+    margin-top: -30px;
+    height: 120px;
+    width: 145px;
+}
+
+@media print {
+    body {
+        display: block;
+        background: white;
+    }
+
+    .control-box {
+        display: none;
+    }
+}
+
+@page {
+    size: A4;
+    margin: 0;
+}
